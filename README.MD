@@ -1,3 +1,6 @@
+## Debug Spring Boot
+-Dlogging.level.org.springframework.web=DEBUG
+
 ## Starting the Order Management System
 To start this web service, install [Maven](https://maven.apache.org/install.html) and execute the following command
 
