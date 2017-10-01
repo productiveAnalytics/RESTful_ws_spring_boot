@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.productiveanalytics</groupId>
+  <artifactId>RESTful_ws_spring_boot</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>RESTful WebService (Level 3 Maturity) with Spring Boot</name>
+  
+  <!-- Spring Boot application -->
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.5.7.RELEASE</version>
+  </parent>
+  
+  <properties>
+  	<java-version>1.8</java-version>
+  </properties>
+  
+	<build>
+		<plugins>
+			<plugin>
+	               <groupId>org.apache.maven.plugins</groupId>
+	               <artifactId>maven-compiler-plugin</artifactId>
+	               <configuration>
+	                   <source>${java-version}</source>
+	                   <target>${java-version}</target>
+	               </configuration>
+	           </plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+  
+  <dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        
+        <!-- To avoid running on default / embedded Tomcat, exclude the dependency -->
+		<!-- exclusions>
+			<exclusion>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-tomcat</artifactId>
+			</exclusion>
+		</exclusions -->
+    </dependency>
+    
+    <!-- dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-jetty</artifactId>
+	</dependency -->
+    
+    <dependency>
+	    <groupId>org.springframework.plugin</groupId>
+	    <artifactId>spring-plugin-core</artifactId>
+	</dependency>
+  
+    <dependency>
+        <groupId>org.springframework.hateoas</groupId>
+        <artifactId>spring-hateoas</artifactId>
+    </dependency>
+    
+    <dependency>
+    	<groupId>com.fasterxml.jackson.core</groupId>
+    	<artifactId>jackson-databind</artifactId>
+    </dependency>
+  </dependencies>
+  
+ 
+	<repositories>
+		<repository>
+			<id>spring-releases</id>
+			<url>https://repo.spring.io/libs-release</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-releases</id>
+			<url>https://repo.spring.io/libs-release</url>
+		</pluginRepository>
+	</pluginRepositories>
+  
+</project>
